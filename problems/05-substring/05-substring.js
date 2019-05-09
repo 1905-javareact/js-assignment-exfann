@@ -11,9 +11,13 @@ function substring(someStr, startIndex, endIndex) {
         console.log(sub)
     }
     else{
-        console.log("invalid entry")
+        throw 'invalid input'
     }
     
 }
-
-substring('hello', 0, 3)
+try{
+substring('hello', 0, 56)
+}
+catch(e){
+    console.log(e)
+}

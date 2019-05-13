@@ -42,14 +42,16 @@ function printShape(shape, height, character) {
     }
     let center = Math.floor(height / 2)
     console.log(center)
-    let left = center--
+    let left = center
+    //left = left--
     console.log(left)
-    let right = center++
+    let right = center
+    //right = right++
     console.log(right)
     a[center] = character
-    console.log(a.join(' '))
+    //console.log(a.join(' '))
     for(let i = 0; i < height; i++){
-      if(i < center){
+      if(i <= center){
         a[left] = character
         a[right] = character
         left--
@@ -57,10 +59,10 @@ function printShape(shape, height, character) {
         console.log(a.join(' '))
       }
       if(i > center){
-        a[left] = ' '
-        a[right] = ' '
         left++
         right--
+        a[left] = ' '
+        a[right] = ' '
         console.log(a.join(' '))
       }
       
@@ -71,4 +73,4 @@ function printShape(shape, height, character) {
 
 printShape('Square', 7, '%')
 printShape('Triangle', 7, '*')
-printShape('Diamond', 5, '%')
+printShape('Diamond', 7, '%')

@@ -3,7 +3,7 @@ Define function objectProperties(someObj)
 Print every property and it's value. */
 function objectProperties(someObj) {
     let keys = Object.keys(someObj)
-    console.log(keys)
+    //console.log(keys)
     for(let prop of keys){
         console.log(`${prop} : ${someObj[prop]}`)
     }

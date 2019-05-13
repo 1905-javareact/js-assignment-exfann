@@ -37,20 +37,31 @@ function printShape(shape, height, character) {
     }
   }
   if(shape === 'Diamond'){
-    let center = arr[Math.floor(height / 2)]
+    for(let y = 0; y < height; y++){
+      a.push(' ')
+    }
+    let center = Math.floor(height / 2)
+    console.log(center)
     let left = center--
+    console.log(left)
     let right = center++
+    console.log(right)
     a[center] = character
-    console.log(a.join(''))
-    for(let i = 0; i < height-1; i++){
+    console.log(a.join(' '))
+    for(let i = 0; i < height; i++){
       if(i < center){
         a[left] = character
         a[right] = character
-        left = left--
-        right = right++
+        left--
+        right++
+        console.log(a.join(' '))
       }
       if(i > center){
-        
+        a[left] = ' '
+        a[right] = ' '
+        left++
+        right--
+        console.log(a.join(' '))
       }
       
 
@@ -60,3 +71,4 @@ function printShape(shape, height, character) {
 
 printShape('Square', 7, '%')
 printShape('Triangle', 7, '*')
+printShape('Diamond', 5, '%')

@@ -8,7 +8,7 @@ function reverseStr(someStr) {
         arr.unshift(key)
     }
     let reverse = arr.join('')
-    console.log(reverse)
+    return reverse
 }
 
-reverseStr('hello')
+console.log(reverseStr('hello'))

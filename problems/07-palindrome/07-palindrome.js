@@ -10,9 +10,11 @@ function isPalindrome(someStr) {
     let reverse = arr.join('')
     if(someStr === reverse){
         console.log(`${someStr} is a palindrome`)
+        return true
     }
     else{
         console.log(`${someStr} is not a palindrome`)
+        return false
     }
 }
 

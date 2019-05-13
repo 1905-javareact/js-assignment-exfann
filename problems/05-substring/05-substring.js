@@ -8,7 +8,7 @@ function substring(someStr, startIndex, endIndex) {
     if(startIndex < split.length && endIndex < split.length){
         split = split.slice(startIndex, endIndex)
         let sub = split.join('')
-        console.log(sub)
+        return sub
     }
     else{
         throw 'invalid input'
@@ -16,7 +16,7 @@ function substring(someStr, startIndex, endIndex) {
     
 }
 try{
-substring('hello', 0, 56)
+console.log(substring('hello', 0, 3))
 }
 catch(e){
     console.log(e)
